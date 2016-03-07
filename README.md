@@ -19,4 +19,4 @@
 
 ## Copyright
 
-Copyright (c) 2016 Daniel Bayerlein (@danielbayerlein), Chris Helgert (@chrishelgert), Marco Streng (@marsn88). See [LICENSE](./LICENSE) for details.
+Copyright (c) 2016 Daniel Bayerlein ([@danielbayerlein](https://github.com/danielbayerlein)), Chris Helgert ([@chrishelgert](https://github.com/chrishelgert)), Marco Streng ([@marsn88](https://github.com/marsn88)). See [LICENSE](./LICENSE) for details.
