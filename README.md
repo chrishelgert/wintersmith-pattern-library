@@ -1,4 +1,4 @@
-# pattern-library
+# wintersmith-pattern-library
 
-# Technology
+## Technology
 * wintersmith
