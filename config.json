@@ -1,5 +1,8 @@
 {
   "locals": {
     "title": "Bare minimum wintersmith site"
-  }
+  },
+  "plugins": [
+    "wintersmith-livereload"
+  ]
 }
