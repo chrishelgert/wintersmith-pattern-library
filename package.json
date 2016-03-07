@@ -1,0 +1,28 @@
+{
+  "name": "wintersmith-pattern-library",
+  "version": "0.0.1",
+  "description": "Pattern Library",
+  "main": "index.js",
+  "scripts": {
+    "build": "wintersmith build",
+    "preview": "wintersmith preview",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://danielbayerlein@github.com/chrishelgert/wintersmith-pattern-library.git"
+  },
+  "keywords": [
+    "Pattern Library",
+    "Style Guide"
+  ],
+  "author": "Daniel Bayerlein",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/chrishelgert/wintersmith-pattern-library/issues"
+  },
+  "homepage": "https://github.com/chrishelgert/wintersmith-pattern-library#readme",
+  "dependencies": {
+    "wintersmith": "^2.3.1"
+  }
+}
