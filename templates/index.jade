@@ -2,8 +2,37 @@ doctype html
 html(lang='en')
   head
     meta(charset='utf-8')
-    | !{ livereloadScript }
+    meta(name='viewport', content='width=device-width, minimum-scale=1.0')
     title= locals.title
+    link(rel='stylesheet', href='https://code.getmdl.io/1.1.1/material.teal-red.min.css')
+    link(rel='stylesheet', href='https://fonts.googleapis.com/icon?family=Material+Icons')
+    // link(rel='stylesheet', href=contents.stylesheets.wpl['application.css'].url)
+    link(rel='shortcut icon', href=contents.images['favicon.png'].url, type='image/x-icon')
+    | !{ livereloadScript }
   body
-    h1= page.title
-    != page.html
+    div.mdl-layout.mdl-js-layout.mdl-layout--fixed-drawer.mdl-layout--fixed-header
+      header.mdl-layout__header
+        div.mdl-layout__header-row
+          span.mdl-layout-title= page.title
+        block tabNavigation
+      div.mdl-layout__drawer
+        nav.mdl-navigation
+          span.mdl-navigation__link.wpl-navigation__title Introduction
+          a(class='mdl-navigation__link', href='/index.html') Overview
+          div.mpl-navigation__separator &nbsp;
+          span.mdl-navigation__link.wpl-navigation__title Category 1
+          a(class='mdl-navigation__link' href='#' data-title='Subcategory 1') Subcategory 1
+          a(class='mdl-navigation__link' href='#' data-title='Subcategory 2') Subcategory 2
+          div.mpl-navigation__separator &nbsp;
+          span.mdl-navigation__link.wpl-navigation__title Category 2
+          a(class='mdl-navigation__link' href='#' data-title='Subcategory 1') Subcategory 1
+          a(class='mdl-navigation__link' href='#' data-title='Subcategory 2') Subcategory 2
+          div.mpl-navigation__separator &nbsp;
+          span.mdl-navigation__link.wpl-navigation__title Category 3
+          a(class='mdl-navigation__link' href='#' data-title='Subcategory 1') Subcategory 1
+          a(class='mdl-navigation__link' href='#' data-title='Subcategory 2') Subcategory 2
+      main.mdl-layout__content
+        div.mpl-layout__content
+          != page.html
+    script(src='https://code.getmdl.io/1.1.1/material.min.js')
+    script(src=contents.javascripts.wpl['application.js'].url)
