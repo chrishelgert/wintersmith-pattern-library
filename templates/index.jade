@@ -19,20 +19,16 @@ html(lang='en')
         nav.mdl-navigation
           span.mdl-navigation__link.wpl-navigation__title Introduction
           a(class='mdl-navigation__link', href='/index.html') Overview
-          div.mpl-navigation__separator &nbsp;
-          span.mdl-navigation__link.wpl-navigation__title Category 1
-          a(class='mdl-navigation__link' href='#' data-title='Subcategory 1') Subcategory 1
-          a(class='mdl-navigation__link' href='#' data-title='Subcategory 2') Subcategory 2
-          div.mpl-navigation__separator &nbsp;
-          span.mdl-navigation__link.wpl-navigation__title Category 2
-          a(class='mdl-navigation__link' href='#' data-title='Subcategory 1') Subcategory 1
-          a(class='mdl-navigation__link' href='#' data-title='Subcategory 2') Subcategory 2
-          div.mpl-navigation__separator &nbsp;
-          span.mdl-navigation__link.wpl-navigation__title Category 3
-          a(class='mdl-navigation__link' href='#' data-title='Subcategory 1') Subcategory 1
-          a(class='mdl-navigation__link' href='#' data-title='Subcategory 2') Subcategory 2
+          div.wpl-navigation__separator
+          each pattern, index in contents.patterns
+            span.mdl-navigation__link.wpl-navigation__title= index
+            each subcategory, index in pattern
+              a(class='mdl-navigation__link' href='#' data-title=index) #{index}
+            unless index == contents.patterns.length - 1
+              div.wpl-navigation__separator
       main.mdl-layout__content
         div.mpl-layout__content
-          != page.html
+          block content
+            != page.html
     script(src='https://code.getmdl.io/1.1.1/material.min.js')
     script(src=contents.javascripts.wpl['application.js'].url)
