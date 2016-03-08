@@ -1,6 +1,7 @@
 ---
 title: Inline text elements
 description: Styling for common inline HTML5 elements.
+template: pattern.jade
 ---
 
 <p>You can use the mark tag to <mark>highlight</mark> text.</p>

@@ -1,6 +1,7 @@
 ---
 title: Customizing headings
 description: Use the included utility classes to recreate the small secondary heading text from Bootstrap 3.
+template: pattern.jade
 ---
 
 <h3>

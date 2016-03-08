@@ -1,6 +1,7 @@
 ---
 title: Striped
 description: Uses a gradient to create a striped effect.
+template: pattern.jade
 ---
 
 <progress class="progress progress-striped" value="10" max="100">10%</progress>

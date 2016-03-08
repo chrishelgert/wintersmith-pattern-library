@@ -1,6 +1,7 @@
 ---
 title: Sizes
 description: Fancy larger or smaller buttons? Add .btn-lg or .btn-sm for additional sizes.
+template: pattern.jade
 ---
 
 <button type="button" class="btn btn-primary btn-lg">Large button</button>

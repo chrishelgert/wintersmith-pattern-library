@@ -1,6 +1,6 @@
 ---
 title: Wintersmith
-template: index.jade
+template: layout.jade
 ---
 
 Hello World

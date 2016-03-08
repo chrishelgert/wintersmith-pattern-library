@@ -1,6 +1,7 @@
 ---
 title: Default
 description: Bootstrap includes six predefined button styles, each serving its own semantic purpose.
+template: pattern.jade
 ---
 
 <!-- Provides extra visual weight and identifies the primary action in a set of buttons -->

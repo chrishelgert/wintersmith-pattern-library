@@ -1,6 +1,6 @@
 ---
 title: Overview
-template: index.jade
+template: layout.jade
 ---
 
 <center>

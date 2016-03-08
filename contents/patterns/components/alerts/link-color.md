@@ -1,6 +1,7 @@
 ---
 title: Link color
 description: Use the .alert-link utility class to quickly provide matching colored links within any alert.
+template: pattern.jade
 ---
 
 <div class="alert alert-success" role="alert">
