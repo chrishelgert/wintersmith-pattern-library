@@ -5,7 +5,7 @@ show_code: false
 use_source: false
 ---
 
-<div class="mpl-color-palette">
+<div class="wpl-color-palette">
   <div class="mdl-card mdl-shadow--2dp" style="background-color: #F44336;">
     <div class="mdl-card__title mdl-card--expand">
       <h2 class="mdl-card__title-text">Red</h2>

@@ -1,12 +1,12 @@
 /* eslint vars-on-top: 0, no-param-reassign: 0 */
 
 /**
- * The MiddlemanPatternLibrary module provides the functionality for the
+ * The PatternLibrary module provides the functionality for the
  * pattern library.
  *
- * @class MiddlemanPatternLibrary
+ * @class PatternLibrary
  */
-(function MiddlemanPatternLibrary() {
+(function PatternLibrary() {
   /**
    * A helper method to loop over a NodeList (querySelectorAll)
    *
@@ -68,12 +68,12 @@
       colorPaletteEl
         .querySelector('.mdl-card__title-text')
         .classList
-        .add('mpl-lighten-87');
+        .add('wpl-lighten-87');
 
       colorPaletteEl
         .querySelector('.mdl-card__menu')
         .classList
-        .add('mpl-lighten-54');
+        .add('wpl-lighten-54');
     }
   });
 
@@ -82,7 +82,7 @@
     var iFrameElements;
 
     if (document.readyState === 'complete') {
-      iFrameElements = document.querySelectorAll('.mpl-layout__content iframe');
+      iFrameElements = document.querySelectorAll('.wpl-layout__content iframe');
       forEach(iFrameElements, function forEachIframeEl(iframeEl) {
         iframeEl.style.height = getHeightByIframeEl(iframeEl);
       });

@@ -1,0 +1,66 @@
+/* Layout */
+
+.wpl-layout__content {
+  padding: 16px;
+}
+
+/* Navigation */
+
+.wpl-navigation__title {
+  font-weight: bold;
+  text-transform: capitalize;
+}
+
+.wpl-navigation__link {
+  text-transform: capitalize;
+}
+
+.wpl-navigation__separator {
+  background-color: #dcdcdc;
+  height: 1px;
+  margin: 16px 0;
+}
+
+/* Color palette */
+
+.wpl-color-palette {
+  align-items: center;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+}
+
+.wpl-color-palette .mdl-card {
+  margin: 8px;
+  width: 200px;
+}
+
+.wpl-color-palette .wpl-lighten-54 {
+  color: rgba(255, 255, 255, .54);
+}
+
+.wpl-color-palette .wpl-lighten-87 {
+  color: rgba(255, 255, 255, .87);
+}
+
+/* Card pattern */
+
+.wpl-card-pattern {
+  align-items: center;
+  justify-content: center;
+  margin: 32px auto;
+  min-height: auto;
+  width: 90%;
+}
+
+/* iFrame */
+
+[data-iframe] {
+  display: none;
+}
+
+/* Code syntax highlighting */
+
+pre.highlight {
+  overflow-y: auto;
+}

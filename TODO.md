@@ -1,6 +1,5 @@
 # TODO
 * show pattern-content (@chrishelgert)
-* styling (scss) (@danielbayerlein)
 * use eslint
 * remove migrate-mpl-to-wpl
 * publicy and transfer ownership to danielbayerlein
