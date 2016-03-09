@@ -18,13 +18,14 @@ html(lang='en')
       div.mdl-layout__drawer
         nav.mdl-navigation
           span.mdl-navigation__link.wpl-navigation__title Introduction
-          a(class='mdl-navigation__link', href='/index.html') Overview
+          a(class='mdl-navigation__link', href=contents.index.url) Overview
           div.wpl-navigation__separator
           - var index = 0
           each subcategory, categoryTitle in contents.patterns
             span.mdl-navigation__link.wpl-navigation__title= categoryTitle
             each subcategoryTitle in Object.keys(subcategory)
-              a(class='mdl-navigation__link wpl-navigation__link' href='#' data-title=subcategoryTitle)= subcategoryTitle
+              // FIXME: Use dynamic links - .url ?
+              a(class='mdl-navigation__link wpl-navigation__link' href='/patterns/#{categoryTitle}/#{subcategoryTitle}' data-title=subcategoryTitle)= subcategoryTitle
             unless index == --Object.keys(contents.patterns).length
               div.wpl-navigation__separator
             - index++
