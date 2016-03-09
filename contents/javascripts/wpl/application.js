@@ -101,4 +101,4 @@
       iframeEl.style.height = getHeightByIframeEl(iframeEl);
     }
   });
-})();
+}());
