@@ -14,14 +14,14 @@ block content
       - var css_class="mdl-layout__tab #{index == 0 ? is-active}"
       section(id="tab-#{pattern.metadata.title.parameterize}" class=css_class)
         div.page-content
-          div.mpl-card-pattern.mdl-card.mdl-shadow--2dp
+          div.wpl-card-pattern.mdl-card.mdl-shadow--2dp
             div.mdl-card__title.mdl-card--expand
               h2.mdl-card__title-text #{pattern.metadata.title}
             div.mdl-card__supporting-text
               if pattern.metadata.description
                 = pattern.metadata.description
                 hr
-              div.mpl-layout__source
+              div.wpl-layout__source
                 if pattern.metadata.use_source == false
                   = pattern.body
                 else

@@ -6,7 +6,7 @@ html(lang='en')
     title= locals.title
     link(rel='stylesheet', href='https://code.getmdl.io/1.1.1/material.teal-red.min.css')
     link(rel='stylesheet', href='https://fonts.googleapis.com/icon?family=Material+Icons')
-    // link(rel='stylesheet', href=contents.stylesheets.wpl['application.css'].url)
+    link(rel='stylesheet', href=contents.stylesheets.wpl['application.css'].url)
     link(rel='shortcut icon', href=contents.images['favicon.png'].url, type='image/x-icon')
     | !{ livereloadScript }
   body
@@ -20,14 +20,16 @@ html(lang='en')
           span.mdl-navigation__link.wpl-navigation__title Introduction
           a(class='mdl-navigation__link', href='/index.html') Overview
           div.wpl-navigation__separator
-          each pattern, index in contents.patterns
-            span.mdl-navigation__link.wpl-navigation__title= index
-            each subcategory, index in pattern
-              a(class='mdl-navigation__link' href='#' data-title=index) #{index}
-            unless index == contents.patterns.length - 1
+          - var index = 0
+          each subcategory, categoryTitle in contents.patterns
+            span.mdl-navigation__link.wpl-navigation__title= categoryTitle
+            each subcategoryTitle in Object.keys(subcategory)
+              a(class='mdl-navigation__link wpl-navigation__link' href='#' data-title=subcategoryTitle)= subcategoryTitle
+            unless index == --Object.keys(contents.patterns).length
               div.wpl-navigation__separator
+            - index++
       main.mdl-layout__content
-        div.mpl-layout__content
+        div.wpl-layout__content
           block content
             != page.html
     script(src='https://code.getmdl.io/1.1.1/material.min.js')
