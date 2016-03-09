@@ -1,7 +1,6 @@
 ---
 title: Lead
 description: Make a paragraph stand out by adding .lead.
-template: pattern.jade
 ---
 
 <p class="lead">

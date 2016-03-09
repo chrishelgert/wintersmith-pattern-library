@@ -1,7 +1,6 @@
 ---
 title: Blockquotes
 description: For quoting blocks of content from another source within your document.
-template: pattern.jade
 ---
 
 <blockquote class="blockquote">
