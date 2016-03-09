@@ -1,5 +1,5 @@
 # TODO
-* show pattern-content
+* show pattern-content (@chrishelgert)
 * styling (scss)
 * use eslint
 * remove migrate-mpl-to-wpl
