@@ -23,6 +23,7 @@
   },
   "homepage": "https://github.com/chrishelgert/wintersmith-pattern-library#readme",
   "dependencies": {
+    "parameterize": "0.0.7",
     "wintersmith": "^2.3.1",
     "wintersmith-livereload": "^0.2.2"
   },

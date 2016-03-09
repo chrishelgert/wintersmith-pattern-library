@@ -3,7 +3,7 @@ html(lang='en')
   head
     meta(charset='utf-8')
     meta(name='viewport', content='width=device-width, minimum-scale=1.0')
-    title= locals.title
+    title #{locals.title} | #{page.title}
     link(rel='stylesheet', href='https://code.getmdl.io/1.1.1/material.teal-red.min.css')
     link(rel='stylesheet', href='https://fonts.googleapis.com/icon?family=Material+Icons')
     link(rel='stylesheet', href=contents.stylesheets.wpl['application.css'].url)
@@ -18,14 +18,14 @@ html(lang='en')
       div.mdl-layout__drawer
         nav.mdl-navigation
           span.mdl-navigation__link.wpl-navigation__title Introduction
-          a(class='mdl-navigation__link', href=contents.index.url) Overview
+          a.mdl-navigation__link(href=contents.index.url) Overview
           div.wpl-navigation__separator
           - var index = 0
           each subcategory, categoryTitle in contents.patterns
             span.mdl-navigation__link.wpl-navigation__title= categoryTitle
             each subcategoryTitle in Object.keys(subcategory)
               // FIXME: Use dynamic links - .url ?
-              a(class='mdl-navigation__link wpl-navigation__link' href='/patterns/#{categoryTitle}/#{subcategoryTitle}' data-title=subcategoryTitle)= subcategoryTitle
+              a.mdl-navigation__link.wpl-navigation__link(href='/patterns/#{categoryTitle}/#{subcategoryTitle}/default.html' data-title=subcategoryTitle)= subcategoryTitle
             unless index == --Object.keys(contents.patterns).length
               div.wpl-navigation__separator
             - index++

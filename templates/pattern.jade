@@ -2,45 +2,35 @@ extends ./layout.jade
 
 block tabNavigation
   - var patterns = page.parent
-  - var active = false
+  if Object.keys(patterns).length > 1
     div.mdl-layout__tab-bar.mdl-js-ripple-effect
-      each pattern, index in patterns
-        unless pattern.metadata.title == page.metadata.title 
-          - var cssClass="mdl-layout__tab"
-          unless active
-            - cssClass += " is_active"
-            - active = true
-          a(href="#tab-#{pattern.metadata.title.replace(' ', '_').toLowerCase()}", class=cssClass)
-            = pattern.metadata.title
+      - var index = 0
+      each pattern, file in patterns
+        a.mdl-layout__tab(class="#{index === 0 ? 'is-active' : ''}" href="#tab-#{parameterize(pattern.metadata.title)}")
+          = pattern.metadata.title
+        - index++
 
-block content  
-  for pattern, index in page.parent
-    - var active = false
-    unless pattern.metadata.title == page.metadata.title
-      - var metadata = pattern.metadata
-      - var markdown = pattern.markdown
-      - var cssClass = "mdl-layout__tab"
-      unless active
-        - cssClass += " is_active"
-        - active = true
-      section(id="tab-#{metadata.title.replace(' ', '_').toLowerCase()}" class=cssClass)
-        div.page-content
-          div.wpl-card-patern.mdl-card.mdl-shadow--2dp
-            div.mdl-card__title.mdl-card--expand
-              h2.mdl-card__title-text= metadata.title
-            div.mdl-card__supporting-text
-              if metadata.description
-                = metadata.description
-                hr
+block content
+  - var index = 0
+  each pattern, file in page.parent
+    section.mdl-layout__tab-panel(class="#{index === 0 ? 'is-active' : ''}" id="tab-#{parameterize(pattern.metadata.title)}")
+      div.page-content
+        div.wpl-card-pattern.mdl-card.mdl-shadow--2dp
+          div.mdl-card__title.mdl-card--expand
+            h2.mdl-card__title-text= pattern.metadata.title
+          div.mdl-card__supporting-text
+            if pattern.metadata.description
+              = pattern.metadata.description
+              hr
             div.wpl-layout__source
-              if metadata.use_source
+              if pattern.metadata.use_source === false
+                !{pattern.html}
+              else
                 div(data-iframe)
-                  = markdown
+                  !{pattern.html}
                   link(rel='stylesheet', href=contents.stylesheets['base.css'].url)
                   script(src=contents.javascripts['base.js'].url)
-              else
-                = markdown
-                
-              if metadata.show_code
-                hr
-                code= markdown
+            if pattern.metadata.show_code !== false
+              hr
+              code= pattern.html
+    - index++

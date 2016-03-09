@@ -1,6 +1,10 @@
 {
+  "defaultTemplate": "pattern.jade",
   "locals": {
-    "title": "Pattern Library |"
+    "title": "Pattern Library"
+  },
+  "require": {
+    "parameterize": "parameterize"
   },
   "plugins": [
     "wintersmith-livereload"
