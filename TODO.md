@@ -1,5 +1,4 @@
 # TODO
-* show pattern-content (@chrishelgert)
 * remove migrate-mpl-to-wpl
 * publicy and transfer ownership to danielbayerlein
 * use different styles for a component or multiple-generate
@@ -7,3 +6,4 @@
 * fancy name
 * default template
 * syntax highlighting
+* npm test should validate styleguide
