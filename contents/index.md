@@ -8,9 +8,8 @@ template: layout.jade
 </center>
 
 <center>
-  [**middleman-pattern-library**](https://github.com/danielbayerlein/middleman-pattern-library)
-  is a [Middleman 4.x](http://middlemanapp.com) project template for creating
-  and managing your front-end pattern library.
+  [**wintersmith-pattern-library**](https://github.com/chrishelgert/wintersmith-pattern-library)
+  is a project for creating and managing your front-end pattern library.
 </center>
 
 ---
@@ -19,12 +18,12 @@ template: layout.jade
 
 #### Folder structure
 
-Your patterns are located in the `source/patterns` folder.
+Your patterns are located in the `contents/patterns` folder.
 
 **For example:**
 
 ```
-source/patterns/
+contents/patterns/
   components/
     alerts/
       default.html
@@ -106,41 +105,41 @@ use_source: false
 
 #### Assets
 
-Your JS is located at `source/javascripts/`
+Your JS is located at `contents/javascripts/`
 
 ```
-source/javascripts
-  mpl/    <= JS for the middleman-pattern-library
+contents/javascripts
+  wpl/    <= JS for the wintersmith-pattern-library
   base.js <= JS for your patterns
 ```
 
-and your CSS is located at `source/stylesheets/`
+and your CSS is located at `contents/stylesheets/`
 
 ```
-source/stylesheets/
-  mpl/      <= CSS for the middleman-pattern-library
-  base.css  <= CSS for your patterns, you can also use Sass.
+contents/stylesheets/
+  wpl/      <= CSS for the wintersmith-pattern-library
+  base.css  <= CSS for your patterns
 ```
 
-### Building the site with `middleman build`
+### Building the site with `npm run build`
 
 Finally, when you are ready to deliver static code, you will need to build the
-site. Using the command-line, from the project folder, run `middleman build`:
+site. Using the command-line, from the project folder, run `npm run build`:
 
 ```bash
 $ cd my_pattern_library
-$ bundle exec middleman build
+$ npm run build
 ```
 
 This will create a static file for each file located in your source folder.
 
 ### OMG, I don't know what I should do!
 
-For help, see the official [Middleman](http://middlemanapp.com) website.
-No success? Then create an [Issue](https://github.com/danielbayerlein/middleman-pattern-library/issues/new).
+For help, see the official [Wintersmith](http://wintersmith.io/) website.
+No success? Then create an [Issue](https://github.com/chrishelgert/wintersmith-pattern-library/issues/new).
 
 ### License
 
-[**middleman-pattern-library**](https://github.com/danielbayerlein/middleman-pattern-library)
+[**wintersmith-pattern-library**](https://github.com/chrishelgert/wintersmith-pattern-library)
 is free and open source! The code is licensed under
-[MIT](https://github.com/danielbayerlein/middleman-pattern-library/blob/master/LICENSE.md).
+[MIT](https://github.com/chrishelgert/wintersmith-pattern-library/blob/master/LICENSE).
