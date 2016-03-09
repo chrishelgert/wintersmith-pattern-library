@@ -1,6 +1,5 @@
 ---
 title: Default
-template: pattern.jade
 ---
 
 <progress class="progress" value="0" max="100">0%</progress>

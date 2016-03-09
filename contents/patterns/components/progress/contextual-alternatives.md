@@ -1,7 +1,6 @@
 ---
 title: Contextual alternatives
 description: Progress bars use some of the same button and alert classes for consistent styles.
-template: pattern.jade
 ---
 
 <progress class="progress progress-success" value="25" max="100">25%</progress>
