@@ -7,8 +7,8 @@ html(lang='en')
     link(rel='stylesheet', href='https://code.getmdl.io/1.1.1/material.teal-red.min.css')
     link(rel='stylesheet', href='https://fonts.googleapis.com/icon?family=Material+Icons')
     link(rel='stylesheet', href=contents.stylesheets.wpl['application.css'].url)
-    link(rel='stylesheet', href=contents.stylesheets.wpl['prism.css'].url)
     link(rel='shortcut icon', href=contents.images['favicon.png'].url, type='image/x-icon')
+    block head
     | !{ livereloadScript }
   body
     div.mdl-layout.mdl-js-layout.mdl-layout--fixed-drawer.mdl-layout--fixed-header
@@ -25,13 +25,8 @@ html(lang='en')
           each subcategory, categoryTitle in contents.patterns
             span.mdl-navigation__link.wpl-navigation__title= categoryTitle
             each pages, subcategoryTitle in subcategory
-              - var url = "/patterns/" + categoryTitle + "/" + subcategoryTitle + "/"
-              - var pageNames = Object.keys(pages)  
-              if pageNames.indexOf('default.md') !== -1
-                - url += 'default.html'
-              else
-                - url += pageNames[0].replace('md', 'html')
-              a.mdl-navigation__link.wpl-navigation__link(href=url data-title=subcategoryTitle)= subcategoryTitle
+              - var path = pages[Object.keys(pages)[0]].filepath.relative.replace('md', 'html')
+              a.mdl-navigation__link.wpl-navigation__link(href='/#{path}' data-title=subcategoryTitle)= subcategoryTitle
             unless index == --Object.keys(contents.patterns).length
               div.wpl-navigation__separator
             - index++
@@ -41,4 +36,4 @@ html(lang='en')
             != page.html
     script(src='https://code.getmdl.io/1.1.1/material.min.js')
     script(src=contents.javascripts.wpl['application.js'].url)
-    script(src=contents.javascripts.wpl['prism.js'].url)
+    block foot

@@ -32,6 +32,12 @@ block content
                   script(src=contents.javascripts['base.js'].url)
             if pattern.metadata.show_code !== false
               hr
-              pre
+              pre.wpl-layout__code
                 code.language-markup= pattern.html
     - index++
+
+block head
+  link(rel='stylesheet', href=contents.stylesheets.wpl['prism.css'].url)
+
+block foot
+  script(src=contents.javascripts.wpl['prism.js'].url)

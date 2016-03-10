@@ -4,6 +4,11 @@
   padding: 16px;
 }
 
+.wpl-layout__code {
+  font-size: inherit !important;
+  line-height: inherit !important;
+}
+
 /* Navigation */
 
 .wpl-navigation__title {
@@ -57,14 +62,4 @@
 
 [data-iframe] {
   display: none;
-}
-
-/* Code syntax highlighting */
-
-code {
-  display: block;
-}
-
-pre.highlight {
-  overflow-y: auto;
 }
