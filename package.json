@@ -17,6 +17,11 @@
     "Style Guide"
   ],
   "author": "Daniel Bayerlein",
+  "contributors": [
+    {
+      "name": "Christopher Helgert"
+    }
+  ],
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/chrishelgert/wintersmith-pattern-library/issues"
