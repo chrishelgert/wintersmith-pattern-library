@@ -24,9 +24,14 @@ html(lang='en')
           - var index = 0
           each subcategory, categoryTitle in contents.patterns
             span.mdl-navigation__link.wpl-navigation__title= categoryTitle
-            each subcategoryTitle in Object.keys(subcategory)
-              // FIXME: Use dynamic links - .url ?
-              a.mdl-navigation__link.wpl-navigation__link(href='/patterns/#{categoryTitle}/#{subcategoryTitle}/default.html' data-title=subcategoryTitle)= subcategoryTitle
+            each pages, subcategoryTitle in subcategory
+              - var url = "/patterns/" + categoryTitle + "/" + subcategoryTitle + "/"
+              - var pageNames = Object.keys(pages)  
+              if pageNames.indexOf('default.md') !== -1
+                - url += 'default.html'
+              else
+                - url += pageNames[0].replace('md', 'html')
+              a.mdl-navigation__link.wpl-navigation__link(href=url data-title=subcategoryTitle)= subcategoryTitle
             unless index == --Object.keys(contents.patterns).length
               div.wpl-navigation__separator
             - index++
