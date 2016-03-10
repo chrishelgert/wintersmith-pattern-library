@@ -5,5 +5,4 @@
 * create a logo ?
 * fancy name
 * default template
-* syntax highlighting
 * npm test should validate styleguide

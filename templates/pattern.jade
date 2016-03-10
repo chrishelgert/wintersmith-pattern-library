@@ -32,6 +32,6 @@ block content
                   script(src=contents.javascripts['base.js'].url)
             if pattern.metadata.show_code !== false
               hr
-              each codePattern in pattern.html.split('\n')
-                code= codePattern
+              pre
+                code.language-markup= pattern.html
     - index++
