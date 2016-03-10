@@ -4,4 +4,4 @@
 * use different styles for a component or multiple-generate
 * create a logo ?
 * fancy name
-* default template
+* default template (fix title)
