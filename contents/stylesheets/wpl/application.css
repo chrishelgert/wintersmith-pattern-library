@@ -61,6 +61,10 @@
 
 /* Code syntax highlighting */
 
+code {
+  display: block;
+}
+
 pre.highlight {
   overflow-y: auto;
 }
