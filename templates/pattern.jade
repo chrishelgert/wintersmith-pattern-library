@@ -24,10 +24,10 @@ block content
               hr
             div.wpl-layout__source
               if pattern.metadata.use_source === false
-                !{pattern.html}
+                | !{pattern.html}
               else
                 div(data-iframe)
-                  !{pattern.html}
+                  | !{pattern.html}
                   link(rel='stylesheet', href=contents.stylesheets['base.css'].url)
                   script(src=contents.javascripts['base.js'].url)
             if pattern.metadata.show_code !== false
