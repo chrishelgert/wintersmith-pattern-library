@@ -6,7 +6,7 @@
   "scripts": {
     "build": "wintersmith build",
     "preview": "wintersmith preview",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "eslint ./contents/javascripts/*.js ./contents/javascripts/**/*.js"
   },
   "repository": {
     "type": "git",
