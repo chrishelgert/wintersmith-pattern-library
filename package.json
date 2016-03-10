@@ -6,7 +6,7 @@
   "scripts": {
     "build": "wintersmith build",
     "preview": "wintersmith preview",
-    "test": "eslint ./contents/javascripts/*.js ./contents/javascripts/**/*.js"
+    "lint": "eslint ./contents/javascripts/*.js ./contents/javascripts/**/*.js"
   },
   "repository": {
     "type": "git",
