@@ -26,34 +26,34 @@ Your patterns are located in the `contents/patterns` folder.
 contents/patterns/
   components/
     alerts/
-      default.html
-      link-color.html
+      default.md
+      link-color.md
     progress/
-      contextual-alternatives.html
-        default.html
-        striped.html
+      contextual-alternatives.md
+        default.md
+        striped.md
   elements/
     buttons/
-      default.html
-      disabled.html
-      outline.html
-      sizes.html
+      default.md
+      disabled.md
+      outline.md
+      sizes.md
     colors/
-      color-palette.html
+      color-palette.md
     typography/
-      blockquotes.html
-      customizing-headings.html
-      headings.html
-      inline-text-elements.html
-      lead.html
+      blockquotes.md
+      customizing-headings.md
+      headings.md
+      inline-text-elements.md
+      lead.md
 ```
 
 **Explanation:**
 
 ```
-elements/         <= Category
-  typography/     <= Subcategory
-    headings.html <= Pattern
+elements/       <= Category
+  typography/   <= Subcategory
+    headings.md <= Pattern
 ```
 
 #### Pattern format
@@ -61,7 +61,7 @@ elements/         <= Category
 Each pattern has a `title`. The `description`, `show_code` and `use_source` is
 optional.
 
-**For example `headings.html`:**
+**For example `headings.md`:**
 
 ```html
 ---
