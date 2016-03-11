@@ -7,6 +7,7 @@
     "parameterize": "parameterize"
   },
   "plugins": [
-    "wintersmith-livereload"
+    "wintersmith-livereload",
+    "./plugins/helpers.js"
   ]
 }
