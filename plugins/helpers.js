@@ -28,7 +28,6 @@ module.exports = function helpers(env, cb) {
     
     return capitalize(title);
   }
-  //pages[Object.keys(pages)[0]].filepath.relative.replace('md', 'html')
   
   /**
    * creates a subcategory-url for the navigation
