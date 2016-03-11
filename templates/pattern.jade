@@ -5,7 +5,7 @@ block headTitle
   title #{locals.title} | #{headTitle}
 
 block headerTitle
-  span.mdl-layout-title= env.helpers.createPatternTitle(page)
+  = env.helpers.createPatternTitle(page)
 
 block tabNavigation
   - var patterns = page.parent
@@ -14,7 +14,6 @@ block tabNavigation
       - var index = 0
       each pattern, file in patterns
         a.mdl-layout__tab(class="#{index === 0 ? 'is-active' : ''}" href="#tab-#{parameterize(pattern.metadata.title)}")
-          // TODO: Show title from subcategory
           = pattern.metadata.title
         - index++
 
