@@ -1,5 +1,21 @@
 extends ./layout.jade
 
+block headTitle
+  // TODO: Move logic to JS
+  - var parentCategory = page.parent.parent
+  each category, index in parentCategory
+    - console.log(index)
+    if page.filepath.relative.indexOf(index) !== -1
+     title #{locals.title} | #{index.substr(0, 1).toUpperCase().concat(index.substr(1))}
+
+block headerTitle
+  // TODO: Move logic to JS
+  - var parentCategory = page.parent.parent
+  each category, index in parentCategory
+    - console.log(index)
+    if page.filepath.relative.indexOf(index) !== -1
+     span.mdl-layout-title= index.substr(0, 1).toUpperCase().concat(index.substr(1))
+
 block tabNavigation
   - var patterns = page.parent
   if Object.keys(patterns).length > 1
