@@ -6,7 +6,7 @@
   "scripts": {
     "build": "wintersmith build",
     "preview": "wintersmith preview",
-    "lint": "eslint ./pulgins/*.js ./contents/javascripts/**/*.js",
+    "lint": "eslint ./pulgins/*.js ./contents/javascripts/wpl/*.js",
     "test": "npm run lint"
   },
   "repository": {
