@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "build": "wintersmith build",
-    "preview": "wintersmith preview",
     "lint": "eslint ./pulgins/*.js ./contents/javascripts/wpl/*.js",
+    "preview": "wintersmith preview",
     "test": "npm run lint && ava"
   },
   "repository": {

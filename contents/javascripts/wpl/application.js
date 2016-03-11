@@ -41,13 +41,16 @@
     parentNode.removeChild(divEl);
   });
 
-  // Add a click event listener on tabs. If you click on a tab, the height of
-  // the visible iframe is set.
+  // Add a click event listener on tabs. If you click on a tab, ...
   var tabElements = document.querySelectorAll('.mdl-layout__tab');
   forEach(tabElements, function forEachTabEl(tabEl) {
     tabEl.addEventListener('click', function click() {
       var _this = this;
 
+      // ... update the document URL
+      history.pushState(null, null, _this.getAttribute('data-url'));
+
+      // .., set the correct height of the visible iframe
       setTimeout(function setTimeout() {
         var selector = _this.getAttribute('href') + ' iframe';
         var iframeEl = document.querySelector(selector);
@@ -77,15 +80,33 @@
     }
   });
 
-  // After the DOM is ready, the height of all iframes is set.
+  // After the DOM is ready, ...
   document.onreadystatechange = function domReady() {
+    var active = 'is-active';
+    var activeTavEl;
+    var containerEl;
     var iFrameElements;
 
     if (document.readyState === 'complete') {
+      // ... set the height of all iframes
       iFrameElements = document.querySelectorAll('.wpl-layout__content iframe');
       forEach(iFrameElements, function forEachIframeEl(iframeEl) {
         iframeEl.style.height = getHeightByIframeEl(iframeEl);
       });
+
+      // ... show the current page
+      if (window.location.pathname !== '/') {
+        activeTavEl = document.querySelector('[data-url="' + window.location.pathname + '"]');
+        if (activeTavEl) {
+          containerEl = document.querySelector(activeTavEl.getAttribute('href'));
+          activeTavEl.classList.add(active);
+        } else {
+          containerEl = document.querySelector('.mdl-layout__tab-panel');
+        }
+        containerEl
+          .classList
+          .add(active);
+      }
     }
   };
 

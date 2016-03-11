@@ -15,12 +15,12 @@ module.exports = function helpers(env, cb) {
   }
 
   /**
-   * Creates the page-title for a pattern-template
+   * Get the page-title for a pattern-template
    *
    * @param {Object} page - current page
    * @return {String} pagetitle
    */
-  function createPatternTitle(page) {
+  function getPatternTitle(page) {
     var parentCategory = page.parent.parent;
     var currentPageUrl = page.filepath.relative;
     var title = '';
@@ -36,12 +36,12 @@ module.exports = function helpers(env, cb) {
   }
 
   /**
-   * Creates a subcategory-url for the navigation
+   * Get the subcategory-url for the navigation
    *
-   * @param {object} pages - all pages for a category
-   * @return {string subcategory-url
+   * @param {Object} pages - all pages for a category
+   * @return {String} subcategory-url
    */
-  function createSubcategoryUrl(pages) {
+  function getSubcategoryUrl(pages) {
     var key = Object.keys(pages)[0];
     return pages[key]
       .filepath
@@ -50,8 +50,8 @@ module.exports = function helpers(env, cb) {
   }
 
   // add the functions to the environment, so we can use it
-  env.helpers.createPatternTitle = createPatternTitle;
-  env.helpers.createSubcategoryUrl = createSubcategoryUrl;
+  env.helpers.getPatternTitle = getPatternTitle;
+  env.helpers.getSubcategoryUrl = getSubcategoryUrl;
 
   // tell the plugin manager we are done
   cb();

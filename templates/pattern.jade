@@ -1,26 +1,23 @@
 extends ./layout.jade
 
 block headTitle
-  - var headTitle = env.helpers.createPatternTitle(page)
+  - var headTitle = env.helpers.getPatternTitle(page)
   title #{locals.title} | #{headTitle}
 
 block headerTitle
-  = env.helpers.createPatternTitle(page)
+  = env.helpers.getPatternTitle(page)
 
 block tabNavigation
   - var patterns = page.parent
-  if Object.keys(patterns).length > 1
-    div.mdl-layout__tab-bar.mdl-js-ripple-effect
-      - var index = 0
-      each pattern, file in patterns
-        a.mdl-layout__tab(class="#{index === 0 ? 'is-active' : ''}" href="#tab-#{parameterize(pattern.metadata.title)}")
-          = pattern.metadata.title
-        - index++
+    if Object.keys(patterns).length > 1
+      div.mdl-layout__tab-bar.mdl-js-ripple-effect
+        each pattern, file in patterns
+          a.mdl-layout__tab(href="#tab-#{parameterize(pattern.metadata.title)}" data-url=pattern.url)
+            = pattern.metadata.title
 
 block content
-  - var index = 0
   each pattern, file in page.parent
-    section.mdl-layout__tab-panel(class="#{index === 0 ? 'is-active' : ''}" id="tab-#{parameterize(pattern.metadata.title)}")
+    section.mdl-layout__tab-panel(id="tab-#{parameterize(pattern.metadata.title)}")
       div.page-content
         div.wpl-card-pattern.mdl-card.mdl-shadow--2dp
           div.mdl-card__title.mdl-card--expand
@@ -41,7 +38,6 @@ block content
               hr
               pre.wpl-layout__code
                 code.language-markup= pattern.html
-    - index++
 
 block head
   link(rel='stylesheet', href=contents.stylesheets.wpl['prism.css'].url)
