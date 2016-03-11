@@ -10,7 +10,7 @@ require('../../plugins/helpers')(env, function helpers() {});
  * Creates a page-mock
  *
  * @param {string} path - relative filepath
- * @result {object} page-mock
+ * @return {object} page-mock
  */
 function createPageMock(path) {
   return {
