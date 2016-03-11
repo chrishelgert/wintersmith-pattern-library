@@ -4,13 +4,13 @@ var test = require('ava');
 var env = {
   helpers: {}
 };
-require('../../plugins/helpers')(env, function() {});
+require('../../plugins/helpers')(env, function helpers() {});
 
 /**
- * creates a page-mock
- * 
- * @param  {string}  path  relative filepath
- * @result {object}        page-mock
+ * Creates a page-mock
+ *
+ * @param {string} path - relative filepath
+ * @result {object} page-mock
  */
 function createPageMock(path) {
   return {
@@ -26,23 +26,23 @@ function createPageMock(path) {
   };
 }
 
-test('createPatternTitle', function(t) {
-  var pageMock = createPageMock('/patterns/components/alerts/default.md')
-  
+test('createPatternTitle', function createPatternTitle(t) {
+  var pageMock = createPageMock('/patterns/components/alerts/default.md');
+
   var title = env.helpers.createPatternTitle(pageMock);
   var expected = 'Alerts';
-  
+
   t.is(title, expected);
 });
 
-test('createSubcategoryUrl', function(t) {
+test('createSubcategoryUrl', function createSubcategoryUrl(t) {
   var pagesMock = {
     'default.md': createPageMock('/patterns/components/alerts/default.md'),
     'link-color.md': createPageMock('patterns/components/alerts/link-color.md')
   };
-  
+
   var url = env.helpers.createSubcategoryUrl(pagesMock);
   var expected = '/patterns/components/alerts/default.html';
-  
+
   t.is(url, expected);
 });
