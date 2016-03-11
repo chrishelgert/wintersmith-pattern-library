@@ -27,7 +27,7 @@ html(lang='en')
           each subcategory, categoryTitle in contents.patterns
             span.mdl-navigation__link.wpl-navigation__title= categoryTitle
             each pages, subcategoryTitle in subcategory
-              - var path = pages[Object.keys(pages)[0]].filepath.relative.replace('md', 'html')
+              - var path = env.helpers.createSubcategoryUrl(pages)
               a.mdl-navigation__link.wpl-navigation__link(href='/#{path}' data-title=subcategoryTitle)= subcategoryTitle
             unless index == --Object.keys(contents.patterns).length
               div.wpl-navigation__separator

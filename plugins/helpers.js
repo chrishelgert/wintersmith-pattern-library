@@ -28,9 +28,22 @@ module.exports = function helpers(env, cb) {
     
     return capitalize(title);
   }
+  //pages[Object.keys(pages)[0]].filepath.relative.replace('md', 'html')
+  
+  /**
+   * creates a subcategory-url for the navigation
+   * 
+   * @param  {object}  pages  all pages for a category
+   * @return {string}         subcategory-url
+   */
+  function createSubcategoryUrl(pages) {
+    var key = Object.keys(pages)[0];
+    return pages[key].filepath.relative.replace('md', 'html');
+  }
   
   // add the functions to the environment, so we can use it
   env.helpers.createPatternTitle = createPatternTitle;
+  env.helpers.createSubcategoryUrl = createSubcategoryUrl;
   
   // tell the plugin manager we are done
   cb();
