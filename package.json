@@ -6,7 +6,8 @@
   "scripts": {
     "build": "wintersmith build",
     "preview": "wintersmith preview",
-    "lint": "eslint ./pulgins/*.js ./contents/javascripts/**/*.js"
+    "lint": "eslint ./pulgins/*.js ./contents/javascripts/**/*.js",
+    "test": "npm run lint && ava"
   },
   "repository": {
     "type": "git",
@@ -33,7 +34,11 @@
     "wintersmith-livereload": "^0.2.2"
   },
   "devDependencies": {
+    "ava": "^0.13.0",
     "eslint": "^2.3.0",
     "eslint-config-airbnb": "^6.1.0"
+  },
+  "ava": {
+    "verbose": true
   }
 }
