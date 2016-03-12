@@ -121,7 +121,7 @@ contents/stylesheets/
   base.css  <= CSS for your patterns
 ```
 
-Your JS and CSS is hosted on a CDN? Insert your external assets into `config.json`:
+Your JS and CSS are hosted on a CDN? Insert your external assets into `config.json`:
 
 ```json`
 {
