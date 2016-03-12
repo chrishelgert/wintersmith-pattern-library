@@ -121,6 +121,34 @@ contents/stylesheets/
   base.css  <= CSS for your patterns
 ```
 
+Your JS and CSS is hosted on a CDN? Insert your external assets into `config.json`:
+
+```json`
+{
+  "locals": {
+    "stylesheets": [
+      "https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/css/bootstrap.min.css"
+    ],
+    "javascripts": [
+      "https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.1/jquery.min.js",
+      "https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/js/bootstrap.min.js"
+    ]
+  }
+}
+```
+
+### Preview the site with `npm run preview`
+
+Start the preview web-server from inside your project folder.
+Using the command-line and run `npm run preview`:
+
+```bash
+$ cd my_pattern_library
+$ npm run preview
+```
+
+This will start a local web server running at http://localhost:8080/.
+
 ### Building the site with `npm run build`
 
 Finally, when you are ready to deliver static code, you will need to build the
