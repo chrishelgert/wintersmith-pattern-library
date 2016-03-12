@@ -1,25 +1,41 @@
 # wintersmith-pattern-library
 
-## Technology
+Flexible and minimalistic - wintersmith-pattern-library is a front-end pattern library / style guide built on top of [wintersmith](https://github.com/jnordberg/wintersmith).
 
-* [Wintersmith](https://github.com/jnordberg/wintersmith)
-* [Material Design Lite](https://github.com/google/material-design-lite)
+## Features
+
+* Create and manage your front-end pattern library / style guide
+* Generate static pages
+* Easy configuration and handling
+* Use internal and external dependencies
 
 ## Installation
 
-```bash
-$ npm install
-```
+1. [Download](../../archive/master.zip) or clone the repository:
+
+  ```bash
+  $ git clone https://github.com/chrishelgert/wintersmith-pattern-library.git
+  ```
+
+2. Install the dependencies:
+
+  ```bash
+  $ npm install
+  ```
 
 ## Usage
 
 ### Build
+
+Create the static files with:
 
 ```bash
 $ npm run build
 ```
 
 ### Preview
+
+Start a local web server running at http://localhost:8080/ with:
 
 ```bash
 $ npm run preview
@@ -35,4 +51,4 @@ $ npm run preview
 
 ## Copyright
 
-Copyright (c) 2016 Daniel Bayerlein ([@danielbayerlein](https://github.com/danielbayerlein)), Chris Helgert ([@chrishelgert](https://github.com/chrishelgert)), Marco Streng ([@marsn88](https://github.com/marsn88)). See [LICENSE](./LICENSE) for details.
+Copyright (c) 2016 Daniel Bayerlein ([@danielbayerlein](https://github.com/danielbayerlein)), Chris Helgert ([@chrishelgert](https://github.com/chrishelgert)). See [LICENSE](./LICENSE) for details.
