@@ -49,9 +49,45 @@ module.exports = function helpers(env, cb) {
       .replace('md', 'html');
   }
 
+  /**
+   * Get a array with Stylesheet files
+   *
+   * @param {Object} contents - content-tree
+   * @return {Object} Array with files
+   */
+  function getStylesheetFiles(contents) {
+    var files = [contents.stylesheets['base.css'].url];
+    var customFiles = env.locals.stylesheets;
+
+    if (customFiles && customFiles.length) {
+      files = customFiles;
+    }
+
+    return files;
+  }
+
+  /**
+   * Get a array with JavaScript files
+   *
+   * @param {Object} contents - content-tree
+   * @return {Object} Array with files
+   */
+  function getJavaScriptFiles(contents) {
+    var files = [contents.javascripts['base.js'].url];
+    var customFiles = env.locals.javascripts;
+
+    if (customFiles && customFiles.length) {
+      files = customFiles;
+    }
+
+    return files;
+  }
+
   // add the functions to the environment, so we can use it
   env.helpers.getPatternTitle = getPatternTitle;
   env.helpers.getSubcategoryUrl = getSubcategoryUrl;
+  env.helpers.getStylesheetFiles = getStylesheetFiles;
+  env.helpers.getJavaScriptFiles = getJavaScriptFiles;
 
   // tell the plugin manager we are done
   cb();

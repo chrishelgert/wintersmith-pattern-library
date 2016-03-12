@@ -1,7 +1,11 @@
 {
   "defaultTemplate": "pattern.jade",
   "locals": {
-    "title": "Pattern Library"
+    "title": "Pattern Library",
+    "stylesheets": [
+      "https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha.2/css/bootstrap.min.css"
+    ],
+    "javascripts": []
   },
   "require": {
     "parameterize": "parameterize"

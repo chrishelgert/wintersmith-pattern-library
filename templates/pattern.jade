@@ -32,8 +32,10 @@ block content
               else
                 div(data-iframe)
                   | !{pattern.html}
-                  link(rel='stylesheet', href=contents.stylesheets['base.css'].url)
-                  script(src=contents.javascripts['base.js'].url)
+                  each href in env.helpers.getStylesheetFiles(contents)
+                    link(rel='stylesheet', href=href)
+                  each src in env.helpers.getJavaScriptFiles(contents)
+                    script(src=src)
             if pattern.metadata.show_code !== false
               hr
               pre.wpl-layout__code
