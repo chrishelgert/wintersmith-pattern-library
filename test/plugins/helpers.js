@@ -38,14 +38,18 @@ function createContentsMock() {
       'base.js': {
         filepath: {
           relative: 'javascripts/base.js'
-        }
+        },
+        // wintersmith would use url-module
+        // and resolve the relative path with the base-url
+        url: '/javascripts/base.js'
       }
     },
     stylesheets: {
       'base.css': {
         filepath: {
           relative: 'stylesheets/base.css'
-        }
+        },
+        url: '/stylesheets/base.css'
       }
     }
   };
@@ -83,7 +87,6 @@ test('getJavaScriptFiles with config', function getJavaScriptFiles(t) {
   t.same(javaScriptFiles, expected);
 });
 
-// TODO: Doesn't work
 test('getJavaScriptFiles without config', function getJavaScriptFiles(t) {
   var contentMock = createContentsMock();
   var javaScriptFiles;
@@ -91,7 +94,7 @@ test('getJavaScriptFiles without config', function getJavaScriptFiles(t) {
   env.locals = {};
   javaScriptFiles = env.helpers.getJavaScriptFiles(contentMock);
 
-  t.same(javaScriptFiles, ['javascripts/base.js']);
+  t.same(javaScriptFiles, ['/javascripts/base.js']);
 });
 
 test('getStylesheetFiles with config', function getStylesheetFiles(t) {
@@ -105,7 +108,6 @@ test('getStylesheetFiles with config', function getStylesheetFiles(t) {
   t.same(stylesheetFiles, expected);
 });
 
-// TODO: Doesn't work
 test('getStylesheetFiles without config', function getStylesheetFiles(t) {
   var contentMock = createContentsMock();
   var stylesheetFiles;
@@ -113,5 +115,5 @@ test('getStylesheetFiles without config', function getStylesheetFiles(t) {
   env.locals = {};
   stylesheetFiles = env.helpers.getStylesheetFiles(contentMock);
 
-  t.same(stylesheetFiles, ['stylesheets/base.css']);
+  t.same(stylesheetFiles, ['/stylesheets/base.css']);
 });
