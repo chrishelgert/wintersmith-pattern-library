@@ -41,8 +41,9 @@ block content
               each codeblock in pattern.html.split(/\r?\n\n/)
                 pre.wpl-layout__code
                   code.language-markup= codeblock
-                  btn.mdl-button.mdl-js-button.mdl-button--fab.mdl-button--colored.mdl-js-ripple-effect.wpl-button__clipboard
-                    i.material-icons assignment
+                  if pattern.metadata.clipboard !== false
+                    btn.mdl-button.mdl-js-button.mdl-button--fab.mdl-button--colored.mdl-js-ripple-effect.wpl-button__clipboard
+                      i.material-icons assignment
 
 block head
   link(rel='stylesheet', href=contents.stylesheets.libs['prism.css'].url)
