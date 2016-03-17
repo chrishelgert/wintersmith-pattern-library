@@ -1,3 +1,4 @@
+/* global Clipboard */
 /* eslint vars-on-top: 0, no-param-reassign: 0 */
 
 /**
@@ -107,6 +108,13 @@
           .classList
           .add(active);
       }
+
+      // ... add initialize clipboard.js
+      new Clipboard('.wpl-button__clipboard', { // eslint-disable-line no-new
+        target: function clickTarget(trigger) {
+          return trigger.previousElementSibling;
+        }
+      });
     }
   };
 

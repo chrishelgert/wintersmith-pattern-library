@@ -38,11 +38,15 @@ block content
                     script(src=src)
             if pattern.metadata.show_code !== false
               hr
-              pre.wpl-layout__code
-                code.language-markup= pattern.html
+              each codeblock in pattern.html.split(/\r?\n\n/)
+                pre.wpl-layout__code
+                  code.language-markup= codeblock
+                  btn.mdl-button.mdl-js-button.mdl-button--fab.mdl-button--colored.mdl-js-ripple-effect.wpl-button__clipboard
+                    i.material-icons assignment
 
 block head
   link(rel='stylesheet', href=contents.stylesheets.libs['prism.css'].url)
 
 block foot
   script(src=contents.javascripts.libs['prism.js'].url)
+  script(src=contents.javascripts.libs['clipboard.js'].url)
