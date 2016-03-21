@@ -39,8 +39,9 @@ block content
             if pattern.metadata.show_code !== false
               hr
               each codeblock in pattern.html.split(/\r?\n\n/)
-                pre.wpl-layout__code
-                  code.language-markup= codeblock
+                div.wpl-layout__code-block
+                  pre.wpl-layout__code
+                    code.language-markup= codeblock
                   if pattern.metadata.clipboard !== false
                     btn.mdl-button.mdl-js-button.mdl-button--fab.mdl-button--colored.mdl-js-ripple-effect.wpl-button__clipboard
                       i.material-icons assignment

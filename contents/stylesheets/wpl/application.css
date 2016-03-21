@@ -65,8 +65,8 @@
 }
 
 /* Code */
-pre {
-  position:relative;
+.wpl-layout__code-block {
+  position: relative;
 }
 
 /* Copy-Button */
