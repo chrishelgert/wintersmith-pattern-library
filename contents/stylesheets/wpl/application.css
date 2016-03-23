@@ -65,28 +65,18 @@
 }
 
 /* Code */
+
 .wpl-layout__code-block {
   position: relative;
 }
 
+.wpl-layout__code {
+}
+
 /* Copy-Button */
+
 .wpl-button__clipboard {
   position: absolute;
   right: 5px;
   top: 5px;
-  min-width: 30px;
-  width: 30px;
-  height: 30px;
-}
-
-.mdl-button--fab.wpl-button__clipboard {
-  background-color: rgb(0,150,136);
-}
-
-.mdl-button--fab.wpl-button__clipboard:hover {
-  background-color: rgb(0,150,136);
-}
-
-.wpl-button__clipboard .material-icons {
-  font-size: 16px;
 }

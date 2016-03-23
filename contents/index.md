@@ -58,8 +58,8 @@ elements/       <= Category
 
 #### Pattern format
 
-Each pattern has a `title`. The `description`, `show_code` and `use_source` is
-optional.
+Each pattern has a `title`. The `description`, `show_code`, `use_source` and
+`clipboard` is optional.
 
 **For example `headings.md`:**
 
@@ -91,6 +91,7 @@ description: Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
 iusmod tempor incididunt ut labore et dolore magna aliqua.
 show_code: false
 use_source: false
+clipboard: false
 ---
 ```
 
@@ -102,6 +103,7 @@ use_source: false
 
 **use_source:** If you set the value to `false`, your CSS will not load.
 
+**clipboard:** If you set the value to `false`, the copy to clipboard icon is not displayed.
 
 #### Assets
 
