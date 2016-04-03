@@ -9,6 +9,10 @@
   line-height: inherit !important;
 }
 
+.wpl-layout__code-block {
+  position: relative;
+}
+
 /* Navigation */
 
 .wpl-navigation__title {
@@ -62,15 +66,6 @@
 
 [data-iframe] {
   display: none;
-}
-
-/* Code */
-
-.wpl-layout__code-block {
-  position: relative;
-}
-
-.wpl-layout__code {
 }
 
 /* Copy-Button */
