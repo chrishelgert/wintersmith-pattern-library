@@ -34,9 +34,9 @@
     "wintersmith-livereload": "^0.2.2"
   },
   "devDependencies": {
-    "ava": "^0.13.0",
-    "eslint": "^2.6.0",
-    "eslint-config-airbnb": "^6.2.0"
+    "ava": "^0.14.0",
+    "eslint": "^2.8.0",
+    "eslint-config-airbnb": "^7.0.0"
   },
   "ava": {
     "verbose": true
