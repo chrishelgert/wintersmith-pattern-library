@@ -62,7 +62,7 @@
 
   // Set the correct CSS class for each color palette based on the background
   // color.
-  var colorPaletteElements = document.querySelectorAll('.mpl-color-palette .mdl-card');
+  var colorPaletteElements = document.querySelectorAll('.wpl-color-palette .mdl-card');
   forEach(colorPaletteElements, function forEachColorPaletteEl(colorPaletteEl) {
     var pattern = /^rgb\(([0-9]{1,3}), ([0-9]{1,3}), ([0-9]{1,3})\)$/;
     var result = pattern.exec(colorPaletteEl.style.backgroundColor);
