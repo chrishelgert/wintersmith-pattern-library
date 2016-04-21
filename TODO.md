@@ -1,6 +1,6 @@
 # TODO
+* add improvements from fork
 * publicy and transfer ownership to danielbayerlein
-* use different styles for a component or multiple-generate
 * create a logo ?
 * Bug in "copy to clipboard"
   * Scrolling doesn't always work (eg. Typography -> Blockquotes).
