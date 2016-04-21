@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "Pattern Library",
   "main": "index.js",
+  "private": "true",
   "scripts": {
     "build": "wintersmith build",
     "lint": "eslint ./test/plugins/** ./contents/javascripts/wpl/**",
