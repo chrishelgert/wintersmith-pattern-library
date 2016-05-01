@@ -46,14 +46,14 @@
   var tabElements = document.querySelectorAll('.mdl-layout__tab');
   forEach(tabElements, function forEachTabEl(tabEl) {
     tabEl.addEventListener('click', function click() {
-      var _this = this;
+      var self = this;
 
       // ... update the document URL
-      history.pushState(null, null, _this.getAttribute('data-url'));
+      history.pushState(null, null, self.getAttribute('data-url'));
 
       // .., set the correct height of the visible iframe
       setTimeout(function setTimeout() {
-        var selector = _this.getAttribute('href') + ' iframe';
+        var selector = self.getAttribute('href') + ' iframe';
         var iframeEl = document.querySelector(selector);
         iframeEl.style.height = getHeightByIframeEl(iframeEl);
       }, 100);
