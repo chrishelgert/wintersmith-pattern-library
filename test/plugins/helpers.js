@@ -84,7 +84,7 @@ test('getJavaScriptFiles with config', function getJavaScriptFiles(t) {
   env.locals = { javascripts: expected };
   javaScriptFiles = env.helpers.getJavaScriptFiles(contentMock);
 
-  t.same(javaScriptFiles, expected);
+  t.deepEqual(javaScriptFiles, expected);
 });
 
 test('getJavaScriptFiles without config', function getJavaScriptFiles(t) {
@@ -94,7 +94,7 @@ test('getJavaScriptFiles without config', function getJavaScriptFiles(t) {
   env.locals = {};
   javaScriptFiles = env.helpers.getJavaScriptFiles(contentMock);
 
-  t.same(javaScriptFiles, ['/javascripts/base.js']);
+  t.deepEqual(javaScriptFiles, ['/javascripts/base.js']);
 });
 
 test('getStylesheetFiles with config', function getStylesheetFiles(t) {
@@ -105,7 +105,7 @@ test('getStylesheetFiles with config', function getStylesheetFiles(t) {
   env.locals = { stylesheets: expected };
   stylesheetFiles = env.helpers.getStylesheetFiles(contentMock);
 
-  t.same(stylesheetFiles, expected);
+  t.deepEqual(stylesheetFiles, expected);
 });
 
 test('getStylesheetFiles without config', function getStylesheetFiles(t) {
@@ -115,5 +115,5 @@ test('getStylesheetFiles without config', function getStylesheetFiles(t) {
   env.locals = {};
   stylesheetFiles = env.helpers.getStylesheetFiles(contentMock);
 
-  t.same(stylesheetFiles, ['/stylesheets/base.css']);
+  t.deepEqual(stylesheetFiles, ['/stylesheets/base.css']);
 });
