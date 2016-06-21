@@ -5,6 +5,7 @@
   "main": "index.js",
   "private": "true",
   "scripts": {
+    "start": "npm run build",
     "build": "wintersmith build",
     "lint": "eslint ./test/plugins/** ./contents/javascripts/wpl/**",
     "preview": "wintersmith preview",
