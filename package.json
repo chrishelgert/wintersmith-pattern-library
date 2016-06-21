@@ -13,7 +13,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://danielbayerlein@github.com/chrishelgert/wintersmith-pattern-library.git"
+    "url": "git+https://danielbayerlein@github.com/danielbayerlein/wintersmith-pattern-library.git"
   },
   "keywords": [
     "Pattern Library",
@@ -27,9 +27,9 @@
   ],
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/chrishelgert/wintersmith-pattern-library/issues"
+    "url": "https://github.com/danielbayerlein/wintersmith-pattern-library/issues"
   },
-  "homepage": "https://github.com/chrishelgert/wintersmith-pattern-library#readme",
+  "homepage": "https://github.com/danielbayerlein/wintersmith-pattern-library#readme",
   "dependencies": {
     "parameterize": "^0.0.7",
     "wintersmith": "^2.3.2",
