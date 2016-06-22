@@ -1,5 +1,7 @@
 # wintersmith-pattern-library
 
+[![Build Status](https://travis-ci.org/danielbayerlein/wintersmith-pattern-library.svg?branch=master)](https://travis-ci.org/danielbayerlein/wintersmith-pattern-library)
+
 Flexible and minimalistic - wintersmith-pattern-library is a front-end pattern library / style guide built on top of [wintersmith](https://github.com/jnordberg/wintersmith).
 
 ## Features
