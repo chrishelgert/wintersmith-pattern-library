@@ -2,8 +2,6 @@
   "name": "wintersmith-pattern-library",
   "version": "1.0.0",
   "description": "Pattern Library",
-  "main": "index.js",
-  "private": "true",
   "scripts": {
     "start": "npm run build",
     "build": "wintersmith build",
