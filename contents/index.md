@@ -8,7 +8,7 @@ template: layout.jade
 </center>
 
 <center>
-  [**wintersmith-pattern-library**](https://github.com/chrishelgert/wintersmith-pattern-library)
+  [**wintersmith-pattern-library**](https://github.com/danielbayerlein/wintersmith-pattern-library)
   is a project for creating and managing your front-end pattern library.
 </center>
 
@@ -166,10 +166,10 @@ This will create a static file for each file located in your source folder.
 ### OMG, I don't know what I should do!
 
 For help, see the official [Wintersmith](http://wintersmith.io/) website.
-No success? Then create an [Issue](https://github.com/chrishelgert/wintersmith-pattern-library/issues/new).
+No success? Then create an [Issue](https://github.com/danielbayerlein/wintersmith-pattern-library/issues/new).
 
 ### License
 
-[**wintersmith-pattern-library**](https://github.com/chrishelgert/wintersmith-pattern-library)
+[**wintersmith-pattern-library**](https://github.com/danielbayerlein/wintersmith-pattern-library)
 is free and open source! The code is licensed under
-[MIT](https://github.com/chrishelgert/wintersmith-pattern-library/blob/master/LICENSE).
+[MIT](https://github.com/danielbayerlein/wintersmith-pattern-library/blob/master/LICENSE).

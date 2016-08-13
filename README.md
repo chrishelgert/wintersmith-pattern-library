@@ -16,7 +16,7 @@ Flexible and minimalistic - wintersmith-pattern-library is a front-end pattern l
 1. [Download](../../archive/master.zip) or clone the repository:
 
   ```bash
-  $ git clone https://github.com/chrishelgert/wintersmith-pattern-library.git
+  $ git clone https://github.com/danielbayerlein/wintersmith-pattern-library.git
   ```
 
 2. Install the dependencies:
