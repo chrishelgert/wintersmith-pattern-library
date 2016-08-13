@@ -5,7 +5,7 @@ html(lang='en')
     meta(name='viewport', content='width=device-width, minimum-scale=1.0')
     block headTitle
       title #{locals.title} | #{page.title}
-    link(rel='stylesheet', href='https://code.getmdl.io/1.1.3/material.teal-red.min.css')
+    link(rel='stylesheet', href='https://code.getmdl.io/1.2.0/material.teal-red.min.css')
     link(rel='stylesheet', href='https://fonts.googleapis.com/icon?family=Material+Icons')
     link(rel='stylesheet', href=contents.stylesheets.wpl['application.css'].url)
     link(rel='shortcut icon', href=contents.images['favicon.png'].url, type='image/x-icon')
@@ -37,6 +37,6 @@ html(lang='en')
         div.wpl-layout__content
           block content
             != page.html
-    script(src='https://code.getmdl.io/1.1.3/material.min.js')
+    script(src='https://code.getmdl.io/1.2.0/material.min.js')
     script(src=contents.javascripts.wpl['application.js'].url)
     block foot
