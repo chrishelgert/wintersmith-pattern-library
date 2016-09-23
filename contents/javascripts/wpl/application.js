@@ -16,7 +16,7 @@
   var forEach = function forEach(array, callback, scope) {
     var i;
 
-    for (i = 0; i < array.length; i++) {
+    for (i = 0; i < array.length; i += 1) {
       callback.call(scope, array[i]);
     }
   };
