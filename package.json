@@ -30,14 +30,14 @@
   "homepage": "https://github.com/danielbayerlein/wintersmith-pattern-library#readme",
   "dependencies": {
     "parameterize": "^0.0.7",
-    "wintersmith": "^2.3.2",
+    "wintersmith": "^2.3.3",
     "wintersmith-livereload": "^0.2.2"
   },
   "devDependencies": {
     "ava": "^0.16.0",
-    "eslint": "^3.3.0",
-    "eslint-config-airbnb-base": "^7.1.0",
-    "eslint-plugin-import": "^1.13.0"
+    "eslint": "^3.6.0",
+    "eslint-config-airbnb-base": "^7.2.0",
+    "eslint-plugin-import": "^1.16.0"
   },
   "ava": {
     "verbose": true
