@@ -16,13 +16,13 @@ Flexible and minimalistic - wintersmith-pattern-library is a front-end pattern l
 1. [Download](../../archive/master.zip) or clone the repository:
 
   ```bash
-  $ git clone https://github.com/danielbayerlein/wintersmith-pattern-library.git
+  git clone https://github.com/danielbayerlein/wintersmith-pattern-library.git
   ```
 
 2. Install the dependencies:
 
   ```bash
-  $ npm install
+  npm install
   ```
 
 ## Usage
@@ -32,7 +32,7 @@ Flexible and minimalistic - wintersmith-pattern-library is a front-end pattern l
 Create the static files with:
 
 ```bash
-$ npm run build
+npm run build
 ```
 
 ### Preview
@@ -40,7 +40,7 @@ $ npm run build
 Start a local web server running at http://localhost:8080/ with:
 
 ```bash
-$ npm run preview
+npm run preview
 ```
 
 ## Contributing
