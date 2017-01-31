@@ -21,16 +21,15 @@ module.exports = function helpers(env, cb) {
    * @return {String} pagetitle
    */
   function getPatternTitle(page) {
-    var parentCategory = page.parent.parent;
+    var parentCategories = Object.keys(page.parent.parent);
     var currentPageUrl = page.filepath.relative;
     var title = '';
-    var prop;
 
-    for (prop in parentCategory) {
+    parentCategories.forEach(function getTitle(prop) {
       if (currentPageUrl.indexOf(prop) !== -1) {
         title = prop;
       }
-    }
+    });
 
     return capitalize(title);
   }
