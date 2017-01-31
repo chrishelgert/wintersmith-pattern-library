@@ -5,7 +5,7 @@
   "scripts": {
     "start": "npm run build",
     "build": "wintersmith build",
-    "lint": "eslint ./test/plugins/** ./plugins/** ./contents/javascripts/wpl/**",
+    "lint": "eslint --ignore-pattern '/contents/javascripts/libs/*' .",
     "preview": "wintersmith preview",
     "test": "npm run lint && ava"
   },
