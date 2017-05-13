@@ -1,2 +1,4 @@
 extends:
   "airbnb-base/legacy"
+env:
+  jest: true

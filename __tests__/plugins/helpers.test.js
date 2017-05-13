@@ -1,10 +1,4 @@
-var test = require('ava');
-
-// Fake plugin-structure for wintersmith
-var env = {
-  helpers: {},
-  locals: {}
-};
+var env = { helpers: {}, locals: {} };
 require('../../plugins/helpers')(env, function helpers() {});
 
 /**
@@ -55,16 +49,16 @@ function createContentsMock() {
   };
 }
 
-test('getPatternTitle', function getPatternTitle(t) {
+test('getPatternTitle', function getPatternTitle() {
   var pageMock = createPageMock('/patterns/components/alerts/default.md');
 
   var title = env.helpers.getPatternTitle(pageMock);
   var expected = 'Alerts';
 
-  t.is(title, expected);
+  expect(title).toBe(expected);
 });
 
-test('getSubcategoryUrl', function getSubcategoryUrl(t) {
+test('getSubcategoryUrl', function getSubcategoryUrl() {
   var pagesMock = {
     'default.md': createPageMock('/patterns/components/alerts/default.md'),
     'link-color.md': createPageMock('patterns/components/alerts/link-color.md')
@@ -73,10 +67,10 @@ test('getSubcategoryUrl', function getSubcategoryUrl(t) {
   var url = env.helpers.getSubcategoryUrl(pagesMock);
   var expected = '/patterns/components/alerts/default.html';
 
-  t.is(url, expected);
+  expect(url).toBe(expected);
 });
 
-test('getJavaScriptFiles with config', function getJavaScriptFiles(t) {
+test('getJavaScriptFiles with config', function getJavaScriptFiles() {
   var contentMock = createContentsMock();
   var expected = ['http://www.example.com/a.js', 'http://www.example.com/b.js'];
   var javaScriptFiles;
@@ -84,20 +78,20 @@ test('getJavaScriptFiles with config', function getJavaScriptFiles(t) {
   env.locals = { javascripts: expected };
   javaScriptFiles = env.helpers.getJavaScriptFiles(contentMock);
 
-  t.deepEqual(javaScriptFiles, expected);
+  expect(javaScriptFiles).toEqual(expected);
 });
 
-test('getJavaScriptFiles without config', function getJavaScriptFiles(t) {
+test('getJavaScriptFiles without config', function getJavaScriptFiles() {
   var contentMock = createContentsMock();
   var javaScriptFiles;
 
   env.locals = {};
   javaScriptFiles = env.helpers.getJavaScriptFiles(contentMock);
 
-  t.deepEqual(javaScriptFiles, ['/javascripts/base.js']);
+  expect(javaScriptFiles).toEqual(['/javascripts/base.js']);
 });
 
-test('getStylesheetFiles with config', function getStylesheetFiles(t) {
+test('getStylesheetFiles with config', function getStylesheetFiles() {
   var contentMock = createContentsMock();
   var expected = ['http://www.example.com/a.css', 'http://www.example.com/b.css'];
   var stylesheetFiles;
@@ -105,15 +99,15 @@ test('getStylesheetFiles with config', function getStylesheetFiles(t) {
   env.locals = { stylesheets: expected };
   stylesheetFiles = env.helpers.getStylesheetFiles(contentMock);
 
-  t.deepEqual(stylesheetFiles, expected);
+  expect(stylesheetFiles).toEqual(expected);
 });
 
-test('getStylesheetFiles without config', function getStylesheetFiles(t) {
+test('getStylesheetFiles without config', function getStylesheetFiles() {
   var contentMock = createContentsMock();
   var stylesheetFiles;
 
   env.locals = {};
   stylesheetFiles = env.helpers.getStylesheetFiles(contentMock);
 
-  t.deepEqual(stylesheetFiles, ['/stylesheets/base.css']);
+  expect(stylesheetFiles).toEqual(['/stylesheets/base.css']);
 });
