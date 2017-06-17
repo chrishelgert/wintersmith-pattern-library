@@ -3459,9 +3459,9 @@ winston@~2.3.0:
     isstream "0.1.x"
     stack-trace "0.0.x"
 
-wintersmith-livereload@^0.2.3:
-  version "0.2.3"
-  resolved "https://registry.yarnpkg.com/wintersmith-livereload/-/wintersmith-livereload-0.2.3.tgz#39a6da00389eb80aa3c5407c3673364757c9054d"
+wintersmith-livereload@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/wintersmith-livereload/-/wintersmith-livereload-1.0.0.tgz#5cea6ff1d309b1f3044ffc5b9c9d4e875206d4d8"
   dependencies:
     ws "^3.0.0"
 
