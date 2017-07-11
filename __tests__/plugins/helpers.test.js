@@ -1,5 +1,5 @@
-var env = { helpers: {}, locals: {} };
-require('../../plugins/helpers')(env, function helpers() {});
+var env = { helpers: {}, locals: {} }
+require('../../plugins/helpers')(env, function helpers () {})
 
 /**
  * Creates a page-mock
@@ -7,7 +7,7 @@ require('../../plugins/helpers')(env, function helpers() {});
  * @param {string} path - relative filepath
  * @return {object} page-mock
  */
-function createPageMock(path) {
+function createPageMock (path) {
   return {
     filepath: {
       relative: path
@@ -18,7 +18,7 @@ function createPageMock(path) {
         progress: {}
       }
     }
-  };
+  }
 }
 
 /**
@@ -26,7 +26,7 @@ function createPageMock(path) {
  *
  * @return {object} contents-mock
  */
-function createContentsMock() {
+function createContentsMock () {
   return {
     javascripts: {
       'base.js': {
@@ -46,68 +46,68 @@ function createContentsMock() {
         url: '/stylesheets/base.css'
       }
     }
-  };
+  }
 }
 
-test('getPatternTitle', function getPatternTitle() {
-  var pageMock = createPageMock('/patterns/components/alerts/default.md');
+test('getPatternTitle', function getPatternTitle () {
+  var pageMock = createPageMock('/patterns/components/alerts/default.md')
 
-  var title = env.helpers.getPatternTitle(pageMock);
-  var expected = 'Alerts';
+  var title = env.helpers.getPatternTitle(pageMock)
+  var expected = 'Alerts'
 
-  expect(title).toBe(expected);
-});
+  expect(title).toBe(expected)
+})
 
-test('getSubcategoryUrl', function getSubcategoryUrl() {
+test('getSubcategoryUrl', function getSubcategoryUrl () {
   var pagesMock = {
     'default.md': createPageMock('/patterns/components/alerts/default.md'),
     'link-color.md': createPageMock('patterns/components/alerts/link-color.md')
-  };
+  }
 
-  var url = env.helpers.getSubcategoryUrl(pagesMock);
-  var expected = '/patterns/components/alerts/default.html';
+  var url = env.helpers.getSubcategoryUrl(pagesMock)
+  var expected = '/patterns/components/alerts/default.html'
 
-  expect(url).toBe(expected);
-});
+  expect(url).toBe(expected)
+})
 
-test('getJavaScriptFiles with config', function getJavaScriptFiles() {
-  var contentMock = createContentsMock();
-  var expected = ['http://www.example.com/a.js', 'http://www.example.com/b.js'];
-  var javaScriptFiles;
+test('getJavaScriptFiles with config', function getJavaScriptFiles () {
+  var contentMock = createContentsMock()
+  var expected = ['http://www.example.com/a.js', 'http://www.example.com/b.js']
+  var javaScriptFiles
 
-  env.locals = { javascripts: expected };
-  javaScriptFiles = env.helpers.getJavaScriptFiles(contentMock);
+  env.locals = { javascripts: expected }
+  javaScriptFiles = env.helpers.getJavaScriptFiles(contentMock)
 
-  expect(javaScriptFiles).toEqual(expected);
-});
+  expect(javaScriptFiles).toEqual(expected)
+})
 
-test('getJavaScriptFiles without config', function getJavaScriptFiles() {
-  var contentMock = createContentsMock();
-  var javaScriptFiles;
+test('getJavaScriptFiles without config', function getJavaScriptFiles () {
+  var contentMock = createContentsMock()
+  var javaScriptFiles
 
-  env.locals = {};
-  javaScriptFiles = env.helpers.getJavaScriptFiles(contentMock);
+  env.locals = {}
+  javaScriptFiles = env.helpers.getJavaScriptFiles(contentMock)
 
-  expect(javaScriptFiles).toEqual(['/javascripts/base.js']);
-});
+  expect(javaScriptFiles).toEqual(['/javascripts/base.js'])
+})
 
-test('getStylesheetFiles with config', function getStylesheetFiles() {
-  var contentMock = createContentsMock();
-  var expected = ['http://www.example.com/a.css', 'http://www.example.com/b.css'];
-  var stylesheetFiles;
+test('getStylesheetFiles with config', function getStylesheetFiles () {
+  var contentMock = createContentsMock()
+  var expected = ['http://www.example.com/a.css', 'http://www.example.com/b.css']
+  var stylesheetFiles
 
-  env.locals = { stylesheets: expected };
-  stylesheetFiles = env.helpers.getStylesheetFiles(contentMock);
+  env.locals = { stylesheets: expected }
+  stylesheetFiles = env.helpers.getStylesheetFiles(contentMock)
 
-  expect(stylesheetFiles).toEqual(expected);
-});
+  expect(stylesheetFiles).toEqual(expected)
+})
 
-test('getStylesheetFiles without config', function getStylesheetFiles() {
-  var contentMock = createContentsMock();
-  var stylesheetFiles;
+test('getStylesheetFiles without config', function getStylesheetFiles () {
+  var contentMock = createContentsMock()
+  var stylesheetFiles
 
-  env.locals = {};
-  stylesheetFiles = env.helpers.getStylesheetFiles(contentMock);
+  env.locals = {}
+  stylesheetFiles = env.helpers.getStylesheetFiles(contentMock)
 
-  expect(stylesheetFiles).toEqual(['/stylesheets/base.css']);
-});
+  expect(stylesheetFiles).toEqual(['/stylesheets/base.css'])
+})

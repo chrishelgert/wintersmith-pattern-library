@@ -5,7 +5,7 @@
   "scripts": {
     "start": "npm run build",
     "build": "wintersmith build",
-    "lint": "eslint --ignore-pattern '/contents/javascripts/libs/*' .",
+    "lint": "standard --verbose | snazzy",
     "preview": "wintersmith preview",
     "test": "npm run lint && jest"
   },
@@ -34,9 +34,16 @@
     "wintersmith-livereload": "^1.0.0"
   },
   "devDependencies": {
-    "eslint": "^3.19.0",
-    "eslint-config-airbnb-base": "^11.2.0",
-    "eslint-plugin-import": "^2.6.1",
-    "jest": "^20.0.4"
+    "jest": "^20.0.4",
+    "snazzy": "^7.0.0",
+    "standard": "^10.0.2"
+  },
+  "standard": {
+    "env": {
+      "jest": true
+    },
+    "ignore": [
+      "/contents/javascripts/libs/"
+    ]
   }
 }
