@@ -2,6 +2,7 @@
 
 [![Build Status](https://travis-ci.org/danielbayerlein/wintersmith-pattern-library.svg?branch=master)](https://travis-ci.org/danielbayerlein/wintersmith-pattern-library)
 [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
+[![Greenkeeper badge](https://badges.greenkeeper.io/danielbayerlein/wintersmith-pattern-library.svg)](https://greenkeeper.io/)
 
 Flexible and minimalistic - wintersmith-pattern-library is a front-end pattern library / style guide built on top of [wintersmith](https://github.com/jnordberg/wintersmith).
 
