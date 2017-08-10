@@ -36,7 +36,7 @@
   "devDependencies": {
     "jest": "^20.0.4",
     "snazzy": "^7.0.0",
-    "standard": "^10.0.2"
+    "standard": "^10.0.3"
   },
   "standard": {
     "env": {
