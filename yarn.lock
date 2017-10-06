@@ -3101,9 +3101,9 @@ parallel-transform@^1.1.0:
     inherits "^2.0.3"
     readable-stream "^2.1.5"
 
-parameterize@^0.0.7:
-  version "0.0.7"
-  resolved "https://registry.yarnpkg.com/parameterize/-/parameterize-0.0.7.tgz#5fdc6c073f7f72388923415d03650e1f19345572"
+parameterize@^0.1.0:
+  version "0.1.0"
+  resolved "https://registry.yarnpkg.com/parameterize/-/parameterize-0.1.0.tgz#2d2b2e3b1a553006d045a3049054a50b9931f79d"
 
 parse-glob@^3.0.4:
   version "3.0.4"
