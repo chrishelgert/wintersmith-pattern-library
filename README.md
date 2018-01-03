@@ -55,4 +55,4 @@ npm run preview
 
 ## Copyright
 
-Copyright (c) 2016-2017 [Daniel Bayerlein](https://github.com/danielbayerlein), [Chris Helgert](https://github.com/chrishelgert). See [LICENSE](./LICENSE) for details.
+Copyright (c) 2016-present [Daniel Bayerlein](https://github.com/danielbayerlein), [Chris Helgert](https://github.com/chrishelgert). See [LICENSE](./LICENSE) for details.
