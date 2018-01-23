@@ -34,7 +34,7 @@
     "wintersmith-livereload": "^1.0.0"
   },
   "devDependencies": {
-    "jest": "^22.0.3",
+    "jest": "^22.1.4",
     "snazzy": "^7.0.0",
     "standard": "^10.0.3"
   },
