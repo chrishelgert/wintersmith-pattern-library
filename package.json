@@ -30,7 +30,7 @@
   "homepage": "https://github.com/danielbayerlein/wintersmith-pattern-library#readme",
   "dependencies": {
     "parameterize": "^0.1.0",
-    "wintersmith": "^2.4.1",
+    "wintersmith": "^2.5.0",
     "wintersmith-livereload": "^1.0.0"
   },
   "devDependencies": {
