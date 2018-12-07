@@ -31,7 +31,7 @@
   "dependencies": {
     "parameterize": "^0.1.0",
     "wintersmith": "^2.5.0",
-    "wintersmith-livereload": "^1.0.0"
+    "wintersmith-livereload": "^1.0.1"
   },
   "devDependencies": {
     "jest": "^23.6.0",
