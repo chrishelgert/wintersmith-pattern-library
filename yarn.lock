@@ -4759,9 +4759,10 @@ parallel-transform@^1.1.0:
     inherits "^2.0.3"
     readable-stream "^2.1.5"
 
-parameterize@^0.1.0:
-  version "0.1.0"
-  resolved "https://registry.yarnpkg.com/parameterize/-/parameterize-0.1.0.tgz#2d2b2e3b1a553006d045a3049054a50b9931f79d"
+parameterize@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/parameterize/-/parameterize-1.0.0.tgz#5c18639f16b0f58ed80390ccfcf1769c63d42264"
+  integrity sha512-7i+fCXWfdt7fEs9xMeQHC5e7G1OXX8J5JtfuzhgnqAZU1i6e2qX3aigQ2OH5uongdqmKz/xgMqfY7jtTZDTBYw==
 
 parse-json@^2.2.0:
   version "2.2.0"
